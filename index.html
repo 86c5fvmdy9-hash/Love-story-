@@ -1,155 +1,0 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>إلى كارين نور عيني ❤️</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
-        
-        * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
-        body { background-color: #ff4d94; font-family: 'Cairo', sans-serif; margin: 0; padding: 0; color: #333; overflow-x: hidden; }
-        
-        .container { display: flex; flex-direction: column; align-items: center; min-height: 100vh; padding: 20px 0; }
-        
-        .card { 
-            background: rgba(255, 255, 255, 0.98); 
-            padding: 25px 15px; 
-            border-radius: 25px; 
-            text-align: center; 
-            width: 92%; 
-            max-width: 450px; 
-            margin: 15px auto; 
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1); 
-            transition: transform 0.4s ease, opacity 0.4s ease;
-            position: relative;
-            z-index: 10;
-        }
-
-        .hidden { display: none !important; opacity: 0; transform: translateY(10px); }
-        .visible { display: block !important; opacity: 1; transform: translateY(0); }
-
-        input, button { width: 100%; padding: 15px; margin: 10px 0; border-radius: 20px; font-size: 18px; text-align: center; border: none; font-weight: bold; }
-        input { border: 2px solid #ffccd5; background: #fff; }
-        button { background: linear-gradient(45deg, #ff4d94, #ff85a1); color: white; cursor: pointer; box-shadow: 0 4px 12px rgba(255,77,148,0.2); }
-        button:active { transform: scale(0.98); }
-
-        .heart { position: fixed; top: -10%; font-size: 18px; z-index: 1; pointer-events: none; animation: fall linear forwards; }
-        @keyframes fall { to { transform: translateY(110vh) rotate(360deg); } }
-
-        .timer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin: 15px 0; }
-        .timer-item { background: #ff4d94; color: white; padding: 8px 4px; border-radius: 12px; font-size: 11px; }
-        .timer-item span { display: block; font-size: 18px; font-weight: 700; }
-
-        .message-content { text-align: justify; line-height: 1.8; font-size: 15px; margin-bottom: 20px; white-space: pre-line; }
-        
-        .gallery-item { background: #fdf2f5; padding: 10px; border-radius: 18px; margin-bottom: 25px; }
-        .gallery-item img { width: 100%; border-radius: 14px; display: block; background: #eee; }
-        .gallery-item p { color: #ff4d94; font-weight: bold; margin: 10px 0 0; font-size: 14px; }
-
-        #no-btn { background: #eee; color: #777; transition: 0.1s; position: relative; }
-    </style>
-</head>
-<body>
-
-    <div class="container">
-        <div id="login-page" class="card visible">
-            <h2 style="color: #ff4d94;">Happy Valentine's Day ❤️</h2>
-            <p style="color:#666">اكتبي تاريخنا يا نور عيني..</p>
-            <input type="tel" id="passInput" placeholder="Password">
-            <button onclick="checkPass()">Unlock Our Love 🔓</button>
-        </div>
-
-        <div id="message-page" class="card hidden">
-            <h2 style="color: #ff4d94;">إلى حبيبة قلبي ❤️</h2>
-            <div class="timer-grid">
-                <div class="timer-item"><span id="days">0</span>يوم</div>
-                <div class="timer-item"><span id="hours">0</span>ساعة</div>
-                <div class="timer-item"><span id="minutes">0</span>دقيقة</div>
-                <div class="timer-item"><span id="seconds">0</span>ثانية</div>
-            </div>
-            <div class="message-content">كنت عايز اقولك اني بحبك اوي اوي اوي اول عيد حب لينا سوا يا نور عيني وعمري ما حبيت ولا هحب حد كدة طول حياتي نفسي اكمل حياتي معاكي نفسي اوي يا كارين اوعي تسبيني اوعي تتغيري عليا ولا حبي الزيادة واهتمامي ليكي يزهقق مني انا عن نفسي ولا اقدر اتغير عليكي في يوم من الايام صدقيني دة حلم عمري يا كارين بجد مهما حاولت اشرح الي جوايا مش عارف تطلعه غير بي اني اهتم واكون حنين عليكي وحرفيا دي اقل حاجة ممكن اقدمها لواحدة قمر زيك بجد مصدقك اشوف واحدة قمر زيك تحبني زي ما بحبها من غير شروط بتحبني بدون مقابل بتحبني بغرض انها بتحبني علشان شخصيتي حب مش مشروط علشانك اي حاجة يا نور عيني هفضل احبك من هنا لحد لما اموت هفضل احبك لحد اخر نفس ممكن اطلعه وكمان عمري ما هسيبك صدقين عمري ما اتغير عليكي ولا اخونك ولا اكذب عليكي مش هخلي حتي يظهر مني غلطة علشان ثقتك فيا عمرها ما تتهز انت حببتي وكل حياتي وعمري الي هنبني سوا متعرفيش بخاف عليكي وبغير عليكي قد ايه صدقيني اعمل اي حاجة علشان تحبيني ولا عمرك تزهقي مني انا اعمل المستحيل علشانك ببقي مبسوط اوي وانا معاكي وبكلمك دة انت بتوحشني واحنا بنتكلم ما بالك لما بتكوني تعبانة ومش قادرة تكلميني ببقا عامل زي المدمن الي هيموت وياخد مخدراته اول لما بسمع صوتك بكون هادي وبفرح اوي اوي بجد انت قمر الي نور حياتي بخاف عليكي من الهوا بغير عليكي غيرة جنونننننن بعشقك ونفسي اشوفك بقا قريب بقا علشان وحشتيني جدا من يوم العيد وانا هتجنن بجد يا كارين تعبت خلاص نفسي امسك ايدك واخدك في حضني وعايز العالم كله يكون ساكت ومفكرش في حاجة في دماغي غيرك انت وبس عيلتك عيلتي اهلك اهلي ونفسي قريب اوي كلهم يتجمعوا يارب اتجوزك وانا متاكد اننا هنعيش انا وانت افضل ايامنا سوا بحبك اوي يا حبيبة قلبي 🥺❤️</div>
-            <button onclick="nextStep('message-page', 'gallery-page')">دوسي هنا عشان تشوفي صورنا ➡️</button>
-        </div>
-
-        <div id="gallery-page" class="card hidden">
-            <h2 style="color: #ff4d94;">أحلى ذكريات ❤️</h2>
-            <div class="gallery-item"><img src="https://raw.githubusercontent.com/86c5fvmdy9-hash/Love-story-/main/IMG_2600.png" loading="lazy"><p>اول ديت لينا سوا❤️🥹</p></div>
-            <div class="gallery-item"><img src="https://raw.githubusercontent.com/86c5fvmdy9-hash/Love-story-/main/IMG_2597.png" loading="lazy"><p>بحب الصورة ديه جدا❤️🌚</p></div>
-            <div class="gallery-item"><img src="https://raw.githubusercontent.com/86c5fvmdy9-hash/Love-story-/main/IMG_2598.png" loading="lazy"><p>اول خروجة لينا سوا واول مرة امسك ايدك🥺🥺❤️</p></div>
-            <div class="gallery-item"><img src="https://raw.githubusercontent.com/86c5fvmdy9-hash/Love-story-/main/IMG_2596.png" loading="lazy"><p>اكتر يوم كنا فيه لوحدنا ودايما بكون مبسوط وانا معاكي❤️❤️💋</p></div>
-            <div class="gallery-item"><img src="https://raw.githubusercontent.com/86c5fvmdy9-hash/Love-story-/main/IMG_2602.png" loading="lazy"><p>كنت مبسوط ودة كان اكتر يوم قضيته معاكي وكنت حاسس ان وسط عيلتي🥺🥺🥺❤️</p></div>
-            <div class="gallery-item"><img src="https://raw.githubusercontent.com/86c5fvmdy9-hash/Love-story-/main/IMG_2594.png" loading="lazy"><p>ديه اكتر صورة بحبها لينا سوا ❤️❤️❤️🌚</p></div>
-            <div class="gallery-item"><img src="https://raw.githubusercontent.com/86c5fvmdy9-hash/Love-story-/main/IMG_2593.png" loading="lazy"><p>Karen always and forever ❤️🫂</p></div>
-            <button onclick="nextStep('gallery-page', 'question-page')">آخر حاجة عايز أقولها.. ➡️</button>
-        </div>
-
-        <div id="question-page" class="card hidden">
-            <h2 style="color: #ff4d94;">آخر سؤال.. ❤️</h2>
-            <p style="font-size: 19px; font-weight: bold;">هتفضلي معايا للأبد؟</p>
-            <button onclick="finalSuccess()">أيوة طبعاً ❤️</button>
-            <button id="no-btn" onmouseover="moveNo()" onclick="moveNo()">لأ 😢</button>
-        </div>
-
-        <div id="real-final" class="card hidden">
-            <div style="font-size: 40px; color: #ff4d94; font-weight: bold; margin: 30px 0;">معاً للأبد ❤️</div>
-            <p style="font-weight: bold; color: #ff4d94; font-size: 17px;">Together Forever 💋</p>
-        </div>
-    </div>
-
-    <script>
-        function createHeart() {
-            const heart = document.createElement('div');
-            heart.classList.add('heart');
-            heart.innerHTML = '❤️';
-            heart.style.left = Math.random() * 100 + 'vw';
-            heart.style.animationDuration = (Math.random() * 2 + 3) + 's';
-            heart.style.opacity = Math.random();
-            document.body.appendChild(heart);
-            setTimeout(() => heart.remove(), 5000);
-        }
-        setInterval(createHeart, 600);
-
-        function moveNo() {
-            const btn = document.getElementById('no-btn');
-            const x = Math.random() * (window.innerWidth - btn.offsetWidth);
-            const y = Math.random() * (window.innerHeight - btn.offsetHeight);
-            btn.style.position = 'fixed';
-            btn.style.left = x + 'px';
-            btn.style.top = y + 'px';
-            btn.style.zIndex = '9999';
-        }
-
-        function nextStep(current, next) {
-            document.getElementById(current).classList.replace('visible', 'hidden');
-            const nextEl = document.getElementById(next);
-            nextEl.classList.replace('hidden', 'visible');
-            window.scrollTo(0, 0);
-        }
-
-        function checkPass() {
-            if (document.getElementById('passInput').value === "11102025") { 
-                nextStep('login-page', 'message-page');
-                startTimer();
-            } else { alert("ركزي في التاريخ يا نور عيني! ❤️"); }
-        }
-
-        function finalSuccess() {
-            alert('أنا كنت عارف إنك هتقولي أيوة! بعشقك يا كارين ❤️');
-            nextStep('question-page', 'real-final');
-        }
-
-        function startTimer() {
-            const startDate = new Date("2025-10-11T23:48:00").getTime();
-            setInterval(function() {
-                const now = new Date().getTime();
-                const diff = now - startDate;
-                document.getElementById("days").innerText = Math.floor(diff / (1000 * 60 * 60 * 24));
-                document.getElementById("hours").innerText = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                document.getElementById("minutes").innerText = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-                document.getElementById("seconds").innerText = Math.floor((diff % (1000 * 60)) / 1000);
-            }, 1000);
-        }
-    </script>
-</body>
-</html>
