@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إلى كارين ❤️</title>
+    <style>
+        /* استخدام خطوط الجهاز الأساسية لسرعة خيالية */
+        body { 
+            background-color: #ff4d94; 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            color: #333; 
+        }
+        
+        .container { 
+            max-width: 500px; 
+            margin: 0 auto; 
+            padding: 15px; 
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* تصميم الكارت الأبيض */
+        .card { 
+            background: #ffffff; 
+            padding: 20px; 
+            border-radius: 20px; 
+            text-align: center; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1); 
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* إخفاء وإظهار العناصر */
+        .hidden { display: none !important; }
+        .visible { display: block !important; animation: fadeIn 0.5s; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        /* الأزرار والإدخال */
+        input, button { 
+            width: 100%; 
+            padding: 15px; 
+            margin: 10px 0; 
+            border-radius: 12px; 
+            border: 1px solid #ddd; 
+            font-size: 16px; 
+            box-sizing: border-box;
+        }
+        button { 
+            background: #ff0066; 
+            color: white; 
+            font-weight: bold; 
+            border: none; 
+            cursor: pointer; 
+        }
+
+        /* العداد */
+        .timer-box { 
+            display: flex; 
+            justify-content: space-between; 
+            margin: 20px 0; 
+            background: #fff0f5; 
+            padding: 10px; 
+            border-radius: 10px;
+        }
+        .timer-item { text-align: center; font-size: 12px; font-weight: bold; color: #ff0066; }
+        .timer-item span { display: block; font-size: 18px; color: #333; }
+
+        /* الرسالة */
+        .message { 
+            text-align: right; 
+            line-height: 1.7; 
+            font-size: 16px; 
+            color: #444; 
+            margin-bottom: 20px; 
+            white-space: pre-line; 
+        }
+
+        /* الصور - أسرع تحميل */
+        .gallery img { 
+            width: 100%; 
+            height: auto; 
+            border-radius: 15px; 
+            margin-bottom: 15px; 
+            background-color: #eee; /* لون مؤقت لحد ما الصورة تفتح */
+            display: block;
+        }
+
+        /* السؤال الأخير */
+        .final-question {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px dashed #ffccd5;
+        }
+
+        /* قلوب خفيفة جداً */
+        .heart-bg { 
+            position: fixed; 
+            top: -20px; 
+            color: rgba(255, 255, 255, 0.3); 
+            z-index: -1; 
+            animation: fall 8s linear infinite; 
+            font-size: 20px;
+        }
+        @keyframes fall { to { transform: translateY(110vh); } }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <div id="login-section" class="card visible">
+            <h2 style="color: #ff0066;">Happy Valentine's ❤️</h2>
+            <p>التاريخ بتاعنا يا نور عيني..</p>
+            <input type="tel" id="passInput" placeholder="اكتبي الباسورد هنا">
+            <button onclick="unlockLove()">دخول 🔓</button>
+        </div>
+
+        <div id="content-section" class="card hidden">
+            <h2 style="color: #ff0066;">إلى كارين حبيبتي ❤️</h2>
+            
+            <div class="timer-box">
+                <div class="timer-item"><span id="days">0</span>يوم</div>
+                <div class="timer-item"><span id="hours">0</span>ساعة</div>
+                <div class="timer-item"><span id="minutes">0</span>دقيقة</div>
+                <div class="timer-item"><span id="seconds">0</span>ثانية</div>
+            </div>
+
+            <div class="message">
+كنت عايز اقولك اني بحبك اوي اوي اوي اول عيد حب لينا سوا يا نور عيني وعمري ما حبيت ولا هحب حد كدة طول حياتي نفسي اكمل حياتي معاكي نفسي اوي يا كارين اوعي تسبيني اوعي تتغيري عليا ولا حبي الزيادة واهتمامي ليكي يزهقق مني انا عن نفسي ولا اقدر اتغير عليكي في يوم من الايام صدقيني دة حلم عمري يا كارين بجد مهما حاولت اشرح الي جوايا مش عارف تطلعه غير بي اني اهتم واكون حنين عليكي وحرفيا دي اقل حاجة ممكن اقدمها لواحدة قمر زيك بجد مصدقك اشوف واحدة قمر زيك تحبني زي ما بحبها من غير شروط بتحبني بدون مقابل بتحبني بغرض انها بتحبني علشان شخصيتي حب مش مشروط علشانك اي حاجة يا نور عيني هفضل احبك من هنا لحد لما اموت هفضل احبك لحد اخر نفس ممكن اطلعه وكمان عمري ما هسيبك صدقين عمري ما اتغير عليكي ولا اخونك ولا اكذب عليكي مش هخلي حتي يظهر مني غلطة علشان ثقتك فيا عمرها ما تتهز انت حببتي وكل حياتي وعمري الي هنبني سوا متعرفيش بخاف عليكي وبغير عليكي قد ايه صدقيني اعمل اي حاجة علشان تحبيني ولا عمرك تزهقي مني انا اعمل المستحيل علشانك ببقي مبسوط اوي وانا معاكي وبكلمك دة انت بتوحشني واحنا بنتكلم ما بالك لما بتكوني تعبانة ومش قادرة تكلميني ببقا عامل زي المدمن الي هيموت وياخد مخدراته اول لما بسمع صوتك بكون هادي وبفرح اوي اوي بجد انت قمر الي نور حياتي بخاف عليكي من الهوا بغير عليكي غيرة جنونننننن بعشقك ونفسي اشوفك بقا قريب بقا علشان وحشتيني جدا من يوم العيد وانا هتجنن بجد يا كارين تعبت خلاص نفسي امسك ايدك واخدك في حضني وعايز العالم كله يكون ساكت ومفكرش في حاجة في دماغي غيرك انت وبس عيلتك عيلتي اهلك اهلي ونفسي قريب اوي كلهم يتجمعوا يارب اتجوزك وانا متاكد اننا هنعيش انا وانت افضل ايامنا سوا بحبك اوي يا حبيبة قلبي 🥺❤️
+            </div>
+
+            <div class="gallery">
+                <p style="color:#ff0066; font-weight:bold;">ذكرياتنا الحلوة 👇</p>
+                <img src="https://raw.githubusercontent.com/86c5fvmdy9-hash/Love-story-/main/IMG_2600.png" loading="eager" alt="Love">
+                <img src="https://raw.githubusercontent.com/86c5fvmdy9-hash/Love-story-/main/IMG_2597.png" loading="lazy" alt="Love">
+                <img src="https://raw.githubusercontent.com/86c5fvmdy9-hash/Love-story-/main/IMG_2598.png" loading="lazy" alt="Love">
+                <img src="https://raw.githubusercontent.com/86c5fvmdy9-hash/Love-story-/main/IMG_2596.png" loading="lazy" alt="Love">
+                <img src="https://raw.githubusercontent.com/86c5fvmdy9-hash/Love-story-/main/IMG_2602.png" loading="lazy" alt="Love">
+                <img src="https://raw.githubusercontent.com/86c5fvmdy9-hash/Love-story-/main/IMG_2594.png" loading="lazy" alt="Love">
+                <img src="https://raw.githubusercontent.com/86c5fvmdy9-hash/Love-story-/main/IMG_2593.png" loading="lazy" alt="Love">
+            </div>
+
+            <div class="final-question">
+                <h3>هتفضلي معايا للأبد؟ 💍</h3>
+                <button onclick="alert('وأنا بعشقك يا روح قلبي! ❤️'); this.innerText='بحبك للأبد ❤️'; this.style.background='#4CAF50';">أيوة طبعاً ❤️</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function unlockLove() {
+            var pass = document.getElementById('passInput').value;
+            if (pass === "11102025") {
+                // إخفاء صفحة الدخول تماماً
+                document.getElementById('login-section').remove(); 
+                // إظهار المحتوى
+                document.getElementById('content-section').classList.remove('hidden');
+                document.getElementById('content-section').classList.add('visible');
+                // تشغيل العداد
+                startTimer();
+                // العودة لأعلى الصفحة
+                window.scrollTo(0,0);
+            } else {
+                alert("التاريخ غلط يا كارين! 🥺");
+            }
+        }
+
+        function startTimer() {
+            // تاريخ البداية
+            const start = new Date("2025-10-11T23:48:00").getTime();
+            
+            setInterval(function() {
+                const now = new Date().getTime();
+                const diff = now - start;
+
+                document.getElementById("days").innerText = Math.floor(diff / (1000 * 60 * 60 * 24));
+                document.getElementById("hours").innerText = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                document.getElementById("minutes").innerText = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                document.getElementById("seconds").innerText = Math.floor((diff % (1000 * 60)) / 1000);
+            }, 1000);
+        }
+
+        // 3 قلوب فقط لتخفيف الحمل على الموبايل
+        for(let i=0; i<3; i++) {
+            let heart = document.createElement('div');
+            heart.className = 'heart-bg';
+            heart.innerHTML = '❤️';
+            heart.style.left = Math.random() * 90 + 'vw';
+            heart.style.animationDelay = i + 's';
+            document.body.appendChild(heart);
+        }
+    </script>
+
+</body>
+</html>
