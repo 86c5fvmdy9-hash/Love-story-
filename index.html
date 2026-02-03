@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>إلى كارين نور عيني ❤️</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+        
+        * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+        body { background-color: #ff4d94; font-family: 'Cairo', sans-serif; margin: 0; padding: 0; color: #333; overflow-x: hidden; }
+        
+        #progress-bar { position: fixed; top: 0; left: 0; height: 6px; background: #fff; width: 0%; z-index: 1000; transition: width 0.3s; }
+
+        .container { display: flex; flex-direction: column; align-items: center; min-height: 100vh; padding: 20px 0; }
+        
+        .card { 
+            background: rgba(255, 255, 255, 0.98); 
+            padding: 30px 20px; 
+            border-radius: 30px; 
+            text-align: center; 
+            width: 92%; 
+            max-width: 450px; 
+            margin: 15px auto; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15); 
+            display: none;
+            position: relative;
+            z-index: 10;
+        }
+
+        .active { display: block; animation: fadeIn 0.8s ease; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        .shake { animation: shake 0.4s; }
+        @keyframes shake { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-10px); } 75% { transform: translateX(10px); } }
+
+        input, button { width: 100%; padding: 16px; margin: 12px 0; border-radius: 20px; font-size: 18px; text-align: center; border: none; font-weight: bold; }
+        input { border: 2px solid #ffccd5; background: #fff; outline: none; }
+        button { background: linear-gradient(45deg, #ff4d94, #ff85a1); color: white; cursor: pointer; box-shadow: 0 5px 15px rgba(255,77,148,0.3); }
+
+        .timeline { position: relative; padding: 20px 0; }
+        .timeline::before { content: ''; position: absolute; top: 0; bottom: 0; width: 3px; background: #ffccd5; left: 50%; transform: translateX(-50%); }
+        .gallery-item { position: relative; background: white; padding: 10px; border-radius: 20px; margin-bottom: 40px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); z-index: 2; }
+        .gallery-item img { width: 100%; border-radius: 15px; display: block; }
+        .gallery-item p { color: #ff4d94; font-weight: bold; margin-top: 10px; font-size: 14px; line-height: 1.5; }
+
+        #scratch-container { position: relative; width: 300px; height: 150px; margin: 20px auto; cursor: crosshair; }
+        #scratch-canvas { position: absolute; top: 0; left: 0; z-index: 2; touch-action: none; border-radius: 15px; }
+        .scratch-reveal { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #fff0f3; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: bold; color: #ff4d94; border-radius: 15px; z-index: 1; }
+
+        .particle { position: fixed; pointer-events: none; z-index: 9999; animation: particle-fade 0.8s forwards; }
+        @keyframes particle-fade { to { opacity: 0; transform: translateY(-50px) scale(1.5); } }
+
+        .timer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 5px; margin-bottom: 20px; }
+        .timer-item { background: #ff4d94; color: white; padding: 10px 2px; border-radius: 12px; font-size: 11px; }
+        .timer-item span { display: block; font-size: 18px; font-weight: bold; }
+
+        .typewriter { text-align: justify; line-height: 1.8; font-size: 16px; min-height: 200px; white-space: pre-line; }
+        #no-btn { background: #eee; color: #777; transition: 0.1s; position: relative; }
+    </style>
+</head>
+<body onclick="spawnHeart(event)">
+
+    <div id="progress-bar"></div>
+
+    <div class="container">
+        <div id="login-page" class="card active">
+            <h2 style="color: #ff4d94;">Happy Valentine's Day ❤️</h2>
+            <p>اكتبي تاريخنا يا نور عيني (DDMMYYYY)</p>
+            <input type="tel" id="passInput" placeholder="Password">
+            <button onclick="checkPass()">Unlock Our Love 🔓</button>
+        </div>
+
+        <div id="message-page" class="card">
+            <h2 style="color: #ff4d94;">إلى حبيبة قلبي ❤️</h2>
+            <div class="timer-grid">
+                <div class="timer-item"><span id="days">0</span>يوم</div>
+                <div class="timer-item"><span id="hours">0</span>ساعة</div>
+                <div class="timer-item"><span id="minutes">0</span>دقيقة</div>
+                <div class="timer-item"><span id="seconds">0</span>ثانية</div>
+            </div>
+            <div id="typewriter-text" class="typewriter"></div>
+            <button id="next-btn" class="hidden" onclick="showPage('gallery-page', 60)">دوسي هنا عشان تشوفي صورنا ➡️</button>
+        </div>
+
+        <div id="gallery-page" class="card">
+            <h2 style="color: #ff4d94;">رحلتنا سوا ❤️</h2>
+            <div class="timeline">
+                <div class="gallery-item">
+                    <img src="https://raw.githubusercontent.com/86c5fvmdy9-hash/Love-story-/main/IMG_2600.png">
+                    <p>اول ديت لينا سوا❤️🥹 وكان حظي قمر ان اول ديت يكون عيد ميلاد حببتي</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://raw.githubusercontent.com/86c5fvmdy9-hash/Love-story-/main/IMG_2597.png">
+                    <p>بحب الصورة ديه جدا❤️🌚</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://raw.githubusercontent.com/86c5fvmdy9-hash/Love-story-/main/IMG_2598.png">
+                    <p>اول خروجة لينا سوا واول مرة امسك ايدك🥺🥺❤️</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://raw.githubusercontent.com/86c5fvmdy9-hash/Love-story-/main/IMG_2596.png">
+                    <p>اكتر يوم كنا فيه لوحدنا ودايما بكون مبسوط وانا معاكي❤️❤️💋</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://raw.githubusercontent.com/86c5fvmdy9-hash/Love-story-/main/IMG_2602.png">
+                    <p>كنت مبسوط ودة كان اكتر يوم قضيته معاكي وكنت حاسس اني وسط عيلتي وكنت مبسوط اني عرفتك قد ايه بحبك🥺🥺🥺❤️</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://raw.githubusercontent.com/86c5fvmdy9-hash/Love-story-/main/IMG_2594.png">
+                    <p>ديه اكتر صورة بحبها لينا سوا ❤️❤️❤️🌚</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://raw.githubusercontent.com/86c5fvmdy9-hash/Love-story-/main/IMG_2593.png">
+                    <p>Karen always and forever ❤️🫂</p>
+                </div>
+            </div>
+            <button onclick="showPage('question-page', 80)">آخر حاجة عايز أقولها.. ➡️</button>
+        </div>
+
+        <div id="question-page" class="card">
+            <h2 style="color: #ff4d94;">سؤال مهم.. ❤️</h2>
+            <p style="font-size: 20px; font-weight: bold;">هتفضلي معايا للأبد؟</p>
+            <button onclick="showPage('scratch-page', 100)">أيوة طبعاً ❤️</button>
+            <button id="no-btn" onmouseover="moveNo()" onclick="moveNo()">لأ 😢</button>
+        </div>
+
+        <div id="scratch-page" class="card">
+            <h2 style="color: #ff4d94;">امسحي هنا يا روحي.. ❤️</h2>
+            <div id="scratch-container">
+                <div class="scratch-reveal">معاً للأبد ❤️</div>
+                <canvas id="scratch-canvas" width="300" height="150"></canvas>
+            </div>
+            <p style="color: #ff4d94; font-weight: bold; margin-top: 20px;">Together Forever 💋</p>
+        </div>
+    </div>
+
+    <script>
+        const fullMessage = `كنت عايز اقولك اني بحبك اوي اوي اوي اول عيد حب لينا سوا يا نور عيني وعمري ما حبيت ولا هحب حد كدة طول حياتي نفسي اكمل حياتي معاكي نفسي اوي يا كارين اوعي تسبيني اوعي تتغيري عليا ولا حبي الزيادة واهتمامي ليكي يزهقق مني انا عن نفسي ولا اقدر اتغير عليكي في يوم من الايام صدقيني دة حلم عمري يا كارين بجد مهما حاولت اشرح الي جوايا مش عارف تطلعه غير بي اني اهتم واكون حنين عليكي وحرفيا دي اقل حاجة ممكن اقدمها لواحدة قمر زيك بجد مصدقك اشوف واحدة قمر زيك تحبني زي ما بحبها من غير شروط بتحبني بدون مقابل بتحبني بغرض انها بتحبني علشان شخصيتي حب مش مشروط علشانك اي حاجة يا نور عيني هفضل احبك من هنا لحد لما اموت هفضل احبك لحد اخر نفس ممكن اطلعه وكمان عمري ما هسيبك صدقين عمري ما اتغير عليكي ولا اخونك ولا اكذب عليكي مش هخلي حتي يظهر مني غلطة علشان ثقتك فيا عمرها ما تتهز انت حببتي وكل حياتي وعمري الي هنبني سوا متعرفيش بخاف عليكي وبغير عليكي قد ايه صدقيني اعمل اي حاجة علشان تحبيني ولا عمرك تزهقي مني انا اعمل المستحيل علشانك ببقي مبسوط اوي وانا معاكي وبكلمك دة انت بتوحشني واحنا بنتكلم ما بالك لما بتكوني تعبانة ومش قادرة تكلميني ببقا عامل زي المدمن الي هيموت وياخد مخدراته اول لما بسمع صوتك بكون هادي وبفرح اوي اوي بجد انت قمر الي نور حياتي بخاف عليكي من الهوا بغير عليكي غيرة جنونننننن بعشقك ونفسي اشوفك بقا قريب بقا علشان وحشتيني جدا من يوم العيد وانا هتجنن بجد يا كارين تعبت خلاص نفسي امسك ايدك واخدك في حضني وعايز العالم كله يكون ساكت ومفكرش في حاجة في دماغي غيرك انت وبس عيلتك عيلتي اهلك اهلي ونفسي قريب اوي كلهم يتجمعوا يارب اتجوزك وانا متاكد اننا هنعيش انا وانت افضل ايامنا سوا بحبك اوي يا حبيبة قلبي 🥺❤️`;
+
+        function spawnHeart(e) {
+            const heart = document.createElement('div');
+            heart.classList.add('particle');
+            heart.innerHTML = '❤️';
+            heart.style.left = (e.touches ? e.touches[0].clientX : e.clientX) + 'px';
+            heart.style.top = (e.touches ? e.touches[0].clientY : e.clientY) + 'px';
+            document.body.appendChild(heart);
+            setTimeout(() => heart.remove(), 800);
+        }
+
+        function showPage(id, progress) {
+            document.querySelectorAll('.card').forEach(c => c.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+            document.getElementById('progress-bar').style.width = progress + '%';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            if (id === 'message-page') typeWriter();
+            if (id === 'scratch-page') initScratch();
+        }
+
+        function checkPass() {
+            const input = document.getElementById('passInput');
+            if (input.value === "11102025") {
+                showPage('message-page', 30);
+                startTimer();
+            } else {
+                input.parentElement.classList.add('shake');
+                setTimeout(() => input.parentElement.classList.remove('shake'), 400);
+                alert("ركزي في التاريخ يا نور عيني! ❤️");
+            }
+        }
+
+        function typeWriter() {
+            let i = 0;
+            const container = document.getElementById('typewriter-text');
+            if (container.innerHTML !== "") return;
+            function type() {
+                if (i < fullMessage.length) {
+                    container.innerHTML += fullMessage.charAt(i);
+                    i++;
+                    setTimeout(type, 35);
+                } else {
+                    document.getElementById('next-btn').classList.remove('hidden');
+                }
+            }
+            type();
+        }
+
+        function moveNo() {
+            const btn = document.getElementById('no-btn');
+            btn.style.position = 'fixed';
+            btn.style.left = Math.random() * (window.innerWidth - 100) + 'px';
+            btn.style.top = Math.random() * (window.innerHeight - 50) + 'px';
+            btn.style.zIndex = '9999';
+        }
+
+        function initScratch() {
+            const canvas = document.getElementById('scratch-canvas');
+            const ctx = canvas.getContext('2d');
+            ctx.fillStyle = '#d1d1d1';
+            ctx.fillRect(0, 0, 300, 150);
+            ctx.globalCompositeOperation = 'destination-out';
+            
+            function scratch(e) {
+                const rect = canvas.getBoundingClientRect();
+                const x = (e.touches ? e.touches[0].clientX : e.clientX) - rect.left;
+                const y = (e.touches ? e.touches[0].clientY : e.clientY) - rect.top;
+                ctx.beginPath();
+                ctx.arc(x, y, 25, 0, Math.PI * 2);
+                ctx.fill();
+            }
+            canvas.addEventListener('mousemove', scratch);
+            canvas.addEventListener('touchmove', scratch);
+        }
+
+        function startTimer() {
+            const startDate = new Date("2025-10-11T23:48:00").getTime();
+            setInterval(() => {
+                const diff = new Date().getTime() - startDate;
+                document.getElementById("days").innerText = Math.floor(diff / 86400000);
+                document.getElementById("hours").innerText = Math.floor((diff % 86400000) / 3600000);
+                document.getElementById("minutes").innerText = Math.floor((diff % 3600000) / 60000);
+                document.getElementById("seconds").innerText = Math.floor((diff % 60000) / 1000);
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
