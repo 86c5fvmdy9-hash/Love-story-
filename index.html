@@ -1,110 +1,0 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>إلى كارين نور عيني ❤️</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
-        body { background-color: #ff4d94; font-family: 'Cairo', sans-serif; margin: 0; padding: 20px 0; color: #333; }
-        .card { background: rgba(255, 255, 255, 0.98); padding: 30px 15px; border-radius: 30px; text-align: center; width: 90%; max-width: 450px; margin: 20px auto; box-shadow: 0 15px 35px rgba(0,0,0,0.2); }
-        .hidden { display: none !important; }
-        input, button { width: 85%; padding: 15px; margin: 10px 0; border-radius: 30px; font-size: 18px; text-align: center; outline: none; border: none; }
-        input { border: 2px solid #ffccd5; }
-        button { background: linear-gradient(45deg, #ff4d94, #ff85a1); color: white; cursor: pointer; font-weight: bold; }
-        .timer-container { background: #fff0f3; padding: 15px; border-radius: 20px; margin: 20px 0; border: 2px dashed #ff4d94; }
-        .timer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 5px; margin-top: 10px; }
-        .timer-item { background: #ff4d94; color: white; padding: 8px; border-radius: 10px; font-size: 13px; }
-        .timer-item span { display: block; font-size: 18px; font-weight: bold; }
-        .message-content { text-align: right; line-height: 1.8; font-size: 16px; white-space: pre-line; margin-bottom: 30px; border-bottom: 2px solid #ffccd5; padding-bottom: 20px; }
-        .list-section { text-align: right; margin: 20px 0; padding: 10px; background: #fff0f3; border-radius: 20px; }
-        .list-section h3 { color: #ff4d94; margin-bottom: 10px; border-bottom: 1px solid #ffccd5; padding-bottom: 5px; }
-        .list-section ul { list-style: none; padding: 0; }
-        .list-section li { margin-bottom: 8px; font-size: 15px; }
-        .gallery-item { background: white; padding: 10px; border-radius: 20px; margin-bottom: 25px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-        .gallery-item img { width: 100%; border-radius: 15px; display: block; }
-        .gallery-item p { color: #ff4d94; font-weight: bold; margin-top: 10px; font-size: 15px; }
-    </style>
-</head>
-<body>
-
-    <div id="login-page" class="card">
-        <h2 style="color: #ff4d94;">Happy Valentine's Day ❤️</h2>
-        <p>اكتبي تاريخنا يا نور عيني..</p>
-        <input type="text" id="passInput" placeholder="DDMMYYYY">
-        <button onclick="checkPass()">Unlock Our Love 🔓</button>
-    </div>
-
-    <div id="main-page" class="card hidden">
-        <h2 style="color: #ff4d94;">إلى كارين حبيبة قلبي ❤️</h2>
-        
-        <div class="timer-container">
-            <p style="margin:0; font-weight:bold; color:#ff4d94;">بقالنا سوا يا نور عيني:</p>
-            <div class="timer-grid">
-                <div class="timer-item"><span id="days">0</span>يوم</div>
-                <div class="timer-item"><span id="hours">0</span>ساعة</div>
-                <div class="timer-item"><span id="minutes">0</span>دقيقة</div>
-                <div class="timer-item"><span id="seconds">0</span>ثانية</div>
-            </div>
-        </div>
-
-        <div class="message-content">كنت عايز اقولك اني بحبك اوي اوي اوي اول عيد حب لينا سوا يا نور عيني وعمري ما حبيت ولا هحب حد كدة طول حياتي نفسي اكمل حياتي معاكي نفسي اوي يا كارين اوعي تسبيني اوعي تتغيري عليا ولا حبي الزيادة واهتمامي ليكي يزهقق مني انا عن نفسي ولا اقدر اتغير عليكي في يوم من الايام صدقيني دة حلم عمري يا كارين بجد مهما حاولت اشرح الي جوايا مش عارف تطلعه غير بي اني اهتم واكون حنين عليكي وحرفيا دي اقل حاجة ممكن اقدمها لواحدة قمر زيك بجد مصدقك اشوف واحدة قمر زيك تحبني زي ما بحبها من غير شروط بتحبني بدون مقابل بتحبني بغرض انها بتحبني علشان شخصيتي حب مش مشروط علشانك اي حاجة يا نور عيني هفضل احبك من هنا لحد لما اموت هفضل احبك لحد اخر نفس ممكن اطلعه وكمان عمري ما هسيبك صدقين عمري ما اتغير عليكي ولا اخونك ولا اكذب عليكي مش هخلي حتي يظهر مني غلطة علشان ثقتك فيا عمرها ما تتهز انت حببتي وكل حياتي وعمري الي هنبني سوا متعرفيش بخاف عليكي وبغير عليكي قد ايه صدقيني اعمل اي حاجة علشان تحبيني ولا عمرك تزهقي مني انا اعمل المستحيل علشانك ببقي مبسوط اوي وانا معاكي وبكلمك دة انت بتوحشني واحنا بنتكلم ما بالك لما بتكوني تعبانة ومش قادرة تكلميني ببقا عامل زي المدمن الي هيموت وياخد مخدراته اول لما بسمع صوتك بكون هادي وبفرح اوي اوي بجد انت قمر الي نور حياتي بخاف عليكي من الهوا بغير عليكي غيرة جنونننننن بعشقك ونفسي اشوفك بقا قريب بقا علشان وحشتيني جدا من يوم العيد وانا هتجنن بجد يا كارين تعبت خلاص نفسي امسك ايدك واخدك في حضني وعايز العالم كله يكون ساكت ومفكرش في حاجة في دماغي غيرك انت وبس عيلتك عيلتي اهلك اهلي ونفسي قريب اوي كلهم يتجمعوا يارب اتجوزك وانا متاكد اننا هنعيش انا وانت افضل ايامنا سوا بحبك اوي يا حبيبة قلبي 🥺❤️</div>
-
-        <div class="list-section">
-            <h3>10 حاجات بعشقها فيكي ❤️</h3>
-            <ul>
-                <li>1. الطريقة اللي بتضحكي بيها لما بتتكسفي</li>
-                <li>2. حنيتك اللي ملهاش حدود مع الكل</li>
-                <li>3. إنك بتفهميني من غير ما أتكلم حرفياً</li>
-                <li>4. لمعة عينيكي اللي بتطمن قلبي أول ما أشوفها</li>
-                <li>5. إنك أحلى وأرق بنت شافتها عيني في الدنيا</li>
-                <li>6. اهتمامك بيا وبكل تفاصيلي حتى في أصعب أوقاتك</li>
-                <li>7. جنانك اللي شبه جناني بالظبط وبنضحك سوا</li>
-                <li>8. طيبة قلبك اللي مفيش زيها في العالم ده كله</li>
-                <li>9. إنك بتخليني أحسن شخص في العالم بوجودك جنبي</li>
-                <li>10. إنك نصي التاني اللي كنت بدور عليه طول عمري</li>
-            </ul>
-        </div>
-
-        <div class="list-section">
-            <h3>أحلامنا اللي جاية سوا ✨</h3>
-            <ul>
-                <li>• نتخرج سوا ونفرح بنجاحنا مع بعض</li>
-                <li>• نلبس الدبل وإيدي في إيدك قدام العالم كله</li>
-                <li>• بيتنا اللي هيجمعنا ونعيش فيه للأبد</li>
-            </ul>
-        </div>
-
-        <div class="gallery-item"><img src="https://raw.githubusercontent.com/86c5fvmdy9-hash/Love-story-/main/IMG_2600.png"><p>اول ديت لينا سوا❤️🥹 وكان حظي قمر ان اول ديت يكون عيد ميلاد حببتي</p></div>
-        <div class="gallery-item"><img src="https://raw.githubusercontent.com/86c5fvmdy9-hash/Love-story-/main/IMG_2597.png"><p>بحب الصورة ديه جدا❤️🌚</p></div>
-        <div class="gallery-item"><img src="https://raw.githubusercontent.com/86c5fvmdy9-hash/Love-story-/main/IMG_2598.png"><p>اول خروجة لينا سوا واول مرة امسك ايدك🥺🥺❤️</p></div>
-        <div class="gallery-item"><img src="https://raw.githubusercontent.com/86c5fvmdy9-hash/Love-story-/main/IMG_2596.png"><p>اكتر يوم كنا فيه لوحدنا ودايما بكون مبسوط وانا معاكي❤️❤️💋</p></div>
-        <div class="gallery-item"><img src="https://raw.githubusercontent.com/86c5fvmdy9-hash/Love-story-/main/IMG_2602.png"><p>كنت مبسوط ودة كان اكتر يوم قضيته معاكي وكنت حاسس اني وسط عيلتي وكنت مبسوط اني عرفتك قد ايه بحبك🥺🥺🥺❤️</p></div>
-        <div class="gallery-item"><img src="https://raw.githubusercontent.com/86c5fvmdy9-hash/Love-story-/main/IMG_2594.png"><p>ديه اكتر صورة بحبها لينا سوا ❤️❤️❤️🌚</p></div>
-        <div class="gallery-item"><img src="https://raw.githubusercontent.com/86c5fvmdy9-hash/Love-story-/main/IMG_2593.png"><p>Karen always and forever ❤️🫂</p></div>
-
-        <p style="font-weight: bold; color: #ff4d94; font-size: 20px; margin-top: 20px;">معاً للأبد ❤️</p>
-    </div>
-
-    <script>
-        function checkPass() {
-            if (document.getElementById('passInput').value === "11102025") { 
-                document.getElementById('login-page').style.display = 'none';
-                document.getElementById('main-page').classList.remove('hidden');
-                startTimer();
-            } else { alert("ركزي في التاريخ يا نور عيني! ❤️"); }
-        }
-        function startTimer() {
-            const startDate = new Date("2025-10-11T23:48:00").getTime();
-            setInterval(function() {
-                const now = new Date().getTime();
-                const diff = now - startDate;
-                document.getElementById("days").innerText = Math.floor(diff / (1000 * 60 * 60 * 24));
-                document.getElementById("hours").innerText = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                document.getElementById("minutes").innerText = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-                document.getElementById("seconds").innerText = Math.floor((diff % (1000 * 60)) / 1000);
-            }, 1000);
-        }
-    </script>
-</body>
-</html>
