@@ -1,74 +1,0 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>إلى حبيبة قلبي كارين ❤️</title>
-    <style>
-        body { background-color: #ff4d94; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 10px; color: #333; overflow-x: hidden; }
-        .container { max-width: 500px; margin: 0 auto; }
-        .card { background: #fff; padding: 25px 20px; border-radius: 20px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin-bottom: 20px; box-sizing: border-box; }
-        
-        /* شاشة الدخول */
-        input[type="password"] { width: 100%; padding: 15px; margin: 10px 0; border-radius: 12px; border: 2px solid #ffccd5; font-size: 18px; text-align: center; box-sizing: border-box; outline: none; }
-        button { width: 100%; padding: 15px; border-radius: 12px; border: none; background: #ff0066; color: white; font-weight: bold; font-size: 17px; cursor: pointer; transition: 0.3s; }
-        button:hover { background: #cc0052; }
-
-        /* صندوق العداد الجديد */
-        .timer-box { background: #fff0f5; border: 2px solid #ff0066; border-radius: 20px; padding: 20px; margin: 20px 0; }
-        .timer-box p { margin: 10px 0; line-height: 1.6; font-weight: bold; color: #ff0066; }
-        .timer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 5px; margin: 15px 0; background: #fff; padding: 10px; border-radius: 15px; box-shadow: inset 0 0 5px rgba(0,0,0,0.05); }
-        .timer-item span { display: block; font-size: 20px; color: #ff0066; font-weight: bold; }
-        .timer-item { font-size: 11px; font-weight: bold; color: #555; }
-
-        .message-full { text-align: justify; line-height: 1.8; font-size: 16px; color: #444; white-space: pre-line; margin-bottom: 25px; }
-        
-        .support-card { border: 4px solid #ff4d94; background: #fff; border-radius: 20px; padding: 20px; margin: 25px 0; }
-        .support-btn { background: #fff; color: #ff4d94; border: 2px solid #ff4d94; width: 80%; border-radius: 15px; padding: 10px; font-size: 20px; margin: 20px auto; cursor: pointer; display: block; transition: 0.3s; }
-        .support-text { text-align: justify; line-height: 1.8; font-size: 16px; color: #333; white-space: pre-line; margin-top: 20px; display: none; }
-
-        .special-box { background: #fff0f5; padding: 20px; border-radius: 15px; margin: 25px 0; text-align: right; border: 1px dashed #ff0066; }
-        .special-box h3 { color: #ff0066; margin-top: 0; font-size: 18px; text-align: center; }
-        .list-item { margin-bottom: 12px; font-weight: bold; color: #555; display: block; line-height: 1.4; }
-
-        .memories-hint { color: #ff0066; font-weight: bold; font-size: 18px; margin: 25px 0; display: block; text-align: center; }
-        .gallery-item { margin-bottom: 30px; border-bottom: 2px solid #fff0f5; padding-bottom: 20px; text-align: center; }
-        .gallery-item img { width: 100%; border-radius: 15px; display: block; background: #eee; min-height: 200px; }
-        .gallery-item p { font-size: 14px; color: #ff0066; font-weight: bold; margin-top: 12px; line-height: 1.6; }
-        
-        .gradient-footer { background: linear-gradient(to left, #ffffff, #ffe6f0); padding: 25px; border-radius: 15px; border: 1px solid #ffccd5; margin: 30px 0; text-align: justify; line-height: 1.7; color: #ff0066; font-weight: bold; }
-        .khals-text { color: #ff0066; font-weight: bold; font-size: 16px; margin: 20px 0; display: block; text-align: center; }
-
-        .hidden { display: none !important; }
-        #scratch-container { position: relative; width: 250px; height: 100px; margin: 20px auto; border-radius: 15px; overflow: hidden; background: #fff; border: 2px solid #ff0066; }
-        #secret-message { position: absolute; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; color: #ff0066; z-index: 1; }
-        #scratch-canvas { position: absolute; top: 0; left: 0; z-index: 2; cursor: pointer; touch-action: none; }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div id="login-section" class="card">
-            <h2 style="color: #ff0066;">Happy Valentine's Day ❤️</h2>
-            <p>اكتبي تاريخ ارتبطنا يا نور عيني❤️🥺</p>
-            <input type="password" id="passInput" placeholder="تاريخ الارتباط (****)">
-            <button onclick="unlock()">Unlock Our Love 🔓</button>
-        </div>
-
-        <div id="content-section" class="card hidden">
-            <h1 style="color: #ff0066; font-size: 20px;">إلى حبيبة قلبي ونور عيني كارين 🥺❤️</h1>
-            
-            <div class="timer-box">
-                <p>عارفة بقالنا قد إيه مغيرين حياة بعض وإحنا سوا يا روح قلبي كل ثانية فيه كانت عمر جديد ليا العداد ده بيحسب كل لحظة حب عشناها وهنعيشها سوا ❤️❤️🥺</p>
-                
-                <div class="timer-grid">
-                    <div class="timer-item"><span id="days">0</span>يوم</div>
-                    <div class="timer-item"><span id="hours">0</span>ساعة</div>
-                    <div class="timer-item"><span id="minutes">0</span>دقيقة</div>
-                    <div class="timer-item"><span id="seconds">0</span>ثانية</div>
-                </div>
-
-                <p>بداية حبنا كانت 11/10/2025 ❤️</p>
-                <p style="font-size: 18px;">بس حبنا ملهوش نهاية لأن حبنا للمالانهاية ❤️ ∞</p>
-            </div>
-
-            <div class="message-full">كنت عايز أقولك إني بحبك أوي أوي أوي يا كاركورةةةةةة تاني عيد حب لينا سواا بس دة يعتبر الاول لينا الي العالم كله بيحتفل بيه يوم 2/14 ده لسه فيه ما بيننا مليون عيد حب وأنا مش بستنى عيد حب علشان أقولك إنك حبيبتي إنتِ حبيبتي طول الأيام والوقت وفخور بيكي وبقوتك إنك فتحتيلي قلبك تاني وانك اديتي نفسك فرصة تجربي تحبي تاني وسمحتيلي أكون جزء من حياتك وعمري ما هخليكي ندمانة انك فتحتيلي قلبك عمري ما حبيت ولا هحب حد كدة طول حياتي نفسي أكمل حياتي معاكي نفسي أوي يا كارين أوعي تسبيني أوعي تتغيري عليا و لا حبي الزيادة واهتمامي ليكي يزهقق مني أنا عن نفسي ولا أقدر أتغير عليكي في يوم من الأيام صدقيني ده حلم عمري يا كارين بجد أنا موجود هنا عشان أكون بيتك اللي لما تزهقي من الدنيا وتتعبي من الناس تروحي تترمي فيه وإنتي متطمنة إن مفيش وجع هيإذيكي تاني وإني دايمًا هكون ضهرك وسندك اللي مبيتهزش ولا عمري لما نتجوز صوتي هيعلي عليكي ولا هشخط فيكي وعايزك تكوني مطمنة من ده كويس وان شاء الله لو بقيت أب هكون حنين عليكي وعلي ولادنا أوي هعتبرهم صحابي اللي معرفتش أعملهم في الدنيا أنا وإنتِ دايماً بنتخدع في الناس بس حاسس إن ربنا بيعوض كل ده بإننا عرفنا بعض إحنا شبه بعض أوي بجد يا حياتي هخلي ولادنا يحبونا وأنا وإنتِ نحبهم أوي نهتم بيهم علطول هخليهم يحكولنا كل حاجة لينا من غير خوف ولا قلق وإننا هنكون المصدر الوحيد اللي بيكونوا مطمنين ليه مهما حاولت أشرح اللي جوايا مش عارف أطلعه غير بي إني أهتم وأكون حنين عليكي وحرفياً دي أقل حاجة ممكن أقدمها لواحدة قمر زيك بجد أنا موجود عشان أثبتلك إن الحب مش وجع ولا خوف الحب هو إنك تلاقي حد يشيلك في عينيه يقدر قيمتك ويفهمك من نظرة عينك أوعدك إن صوتي مش هيعلى عليكي أبداً وزعلك هيفضل أغلى حاجة عندي وأوعدك إني هفضل زي ما أنا الحنين اللي عرفتيه في الأول هيفضل هو هو لآخر يوم في عمري أنا بجد مش بس لقيت فيكي حبيبتي أنا لقيت فيكي وفي أهلك العيلة اللي بجد كنت بتمناها وجودي وسطكم بيخليني أحس إني في بيتي ونفسي بيتنا إحنا كمان يكون هو جن
